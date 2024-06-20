@@ -1,0 +1,156 @@
+
+/* File main.css */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.all{
+    animation: animate 8s ease-in infinite;
+}
+body{
+    background-color: black !important;
+    overflow-x: hidden !important;
+}
+.animated-title {
+    color: #222;
+    font-family: Roboto, Arial, sans-serif;
+    height: 90vmin;
+    left: 50%;
+    position: absolute;
+    margin-top: 180px;
+    transform: translate(-50%, -50%);
+    width: 90vmin;
+}
+.animated-title > div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.animated-title > div div {
+    font-size: 8vmin;
+    padding: 2vmin 0;
+    position: absolute;
+}
+.animated-title > div div span {
+    display: block;
+}
+.animated-title > div.text-top {
+    border-bottom: 1vmin solid #e29301;
+    top: 0;
+}
+.animated-title > div.text-top div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+    color: #b8b8b8;
+}
+.animated-title > div.text-bottom {
+    bottom: 0;
+    color: #b8b8b8;
+}
+.animated-title > div.text-bottom div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+}
+.card{
+    background-color: transparent !important;
+    border: none !important;
+}
+.card .card-title{
+    color: white;
+}
+span{
+    color: #e29301;
+}
+.card-title{
+    font-size: 60px;
+}
+.form-control{
+    color: white !important;
+    background-color: black !important;
+    border-radius: 50px !important;
+    border-color: #e29301 !important;
+    border-width: 3px !important;
+    border-style: solid;    
+}
+::placeholder{
+    color: rgb(141, 139, 139) !important;
+}
+.form-section .card-title{
+    font-size: 30px !important;
+}
+.to{
+    background-color: #e29301 !important;
+    color: rgb(40, 49, 5) !important;
+    width: 250px !important; 
+    border-radius: 50px !important; 
+    font-weight: 600 !important;
+}
+.to:hover{
+    background-color: #ffffff !important;
+    color: rgb(40, 49, 5) !important;
+}
+input{
+    color: white !important;
+    background-color: black !important;
+    border-radius: 50px !important;
+    border-color: #e29301 !important;
+    border-width: 3px !important;
+    border-style: solid; 
+    margin-top: 10px !important;
+}
+.generate{
+    border-radius: 50px;
+    background-color: #e29301;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+/* Animation Background */
+@keyframes animate{
+
+    0%{
+        background-color: black; 
+    }
+    25%{
+        background-position: 0 50%;
+        background-color: rgb(31, 30, 30);
+      }
+    50%{
+        background-position: 10% 50%;
+        background-color: black;  
+    }
+    75%{
+        background-position: 10% 80%;
+        background-color: rgb(65, 47, 16);  
+    }
+    100%{
+        background-color: rgb(26, 25, 25);
+       
+      }
+}
+
+/* Animation Text */
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
